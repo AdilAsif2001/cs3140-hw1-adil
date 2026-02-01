@@ -117,6 +117,7 @@ const student = {
 };
 
 // ============ TEST YOUR CODE ============
+// Test Part 1
 console.log("=== Part 1: Arrays ===");
 console.log("Numbers:", numbers);
 console.log("Sum:", sum(numbers));
@@ -124,11 +125,13 @@ console.log("Average:", average(numbers));
 console.log("Min:", min(numbers));
 console.log("Max:", max(numbers));
 
+// Test Part 2
 console.log("\n=== Part 2: Strings ===");
 console.log("capitalize('hello'):", capitalize("hello"));
 console.log("reverse('hello'):", reverse("hello"));
 console.log("countVowels('hello'):", countVowels("hello"));
 
+// Test Part 3
 console.log("\n=== Part 3: Object ===");
 console.log("Student:", student.name);
 console.log("Grades:", student.grades);
