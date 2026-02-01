@@ -86,17 +86,33 @@ function countVowels(str) {
 }
 
 // ============ PART 3: OBJECT ============
+
+// Student object with properties and methods
 const student = {
-  name: "Your Name",
-  age: 20,
-  grades: [85, 92, 78, 90, 88],
+  name: "Adil Asif",  // Student name
+  age: 20,           // Student age
+  grades: [85, 92, 78, 90, 88],  // Array of grades
   
+  // Get average grade.
   getAverage: function() {
-    // TODO: Return average of this.grades
+    let total = 0;  // Store sum of grades
+
+    // Loop through grades array
+    for (let index = 0; index < this.grades.length; index++) {
+      total = total + this.grades[index];  // Add grade to total
+    }
+    return total / this.grades.length;
   },
   
+  // Check if student is on honor roll.
   isHonorRoll: function() {
-    // TODO: Return true if average > 85
+
+    // If average grade is greater than 85
+    if(this.getAverage() > 85){
+      return true;   // Student is on honor roll
+    } else {
+      return false;  // Student is not on honor roll
+    }
   }
 };
 
