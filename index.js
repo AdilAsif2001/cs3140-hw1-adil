@@ -44,20 +44,45 @@ function max(arr) {
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
+
+// Function to capitalize first letter of a string.
 function capitalize(str) {
-  // TODO: Return string with first letter capitalized
-  // "hello" -> "Hello"
+  let firstLetter = str[0].toUpperCase(); // Capitalize first character
+  let restOfWord = str.slice(1);          // Get rest of the string
+  return firstLetter + restOfWord;        // Combine and return
 }
 
+// Function to reverse a String.
 function reverse(str) {
-  // TODO: Return the string reversed
-  // "hello" -> "olleh"
-  // Hint: str.split("").reverse().join("")
+  let reversed = "";  // Empty string to store reversed result
+
+  // Loop from last character to first
+  for(let i = str.length - 1; i >= 0; i--){
+    reversed = reversed + str[i];  // Add characters in reverse order
+  }
+  return reversed;
 }
 
+// Function to count vowels in a string.
 function countVowels(str) {
-  // TODO: Return count of vowels (a, e, i, o, u)
-  // "hello" -> 2
+  let count = 0;  // Variable to count vowels
+
+   // Loop through each character in the string
+  for(let i = 0; i < str.length; i++){
+    let letter = str[i].toLowerCase();  // Convert character to lowercase
+
+    // Check if character is a vowel
+    if (
+      letter === "a" ||
+      letter === "e" ||
+      letter === "i" ||
+      letter === "o" ||
+      letter === "u"
+    ) {
+      count++;  // Increase vowel count
+    }
+  }
+  return count;
 }
 
 // ============ PART 3: OBJECT ============
